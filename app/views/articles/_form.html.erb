@@ -1,4 +1,4 @@
-<% if @article.errors.any? %>
+d<% if @article.errors.any? %>
   <h2> The following errors prevented the article from being saved: </h2>
   <ul>
     <% @article.errors.full_messages.each do |error| %>
@@ -8,16 +8,24 @@
 <% end %>
 
 <%= form_with(model: @article, local: true) do |f| %>
-  <p>
-    <%= f.label :title %><br/>
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :description %><br/>
-    <%= f.text_area :description %>
-  </p>
-
-  <p>
-    <%= f.submit %>
-  </p>
+  <div class="form-group row">
+    <div class="col-8 mx-auto">
+      <%= f.text_field :title, class: "form-control", placeholder: 'Title' %>
+    </div>
+  </div>
+  <br/>
+  <div class="form-group row">
+    <div class="col-8 mx-auto">
+      <%= f.text_area :description, rows: 10, class: "form-control", placeholder: 'Description of article' %>
+    </div>
+  </div>
+  <br/>
+  <div class="form-group row mx-auto col-2">
+    <div class="btn-group justify-content-between">
+      <%= f.submit class: "btn btn-info"%>
+      <%= link_to "Back to list", articles_path, class: "btn btn-secondary" %>
+    </div>
+  </div>
 <% end %>
+<br/>
+

@@ -1,21 +1,22 @@
 .navbar {
-  background-color: #0d6efd !important;
+  background-color: #446ef636 !important;
 }
 
 .nav-link {
-  color: white !important
+  color: #212529 !important
 }
 
 #logo {
   float: left;
   font-size: 1.7em;
-  color: #fff;
+  color: #212529;
   letter-spacing: -1px;
   font-weight: bold;
 }
 
 #home-container {
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 html,
@@ -25,8 +26,12 @@ body {
 
 #page-content {
   flex: 1 0 auto;
+  background-image: asset_url('home_image_v2.jpg');
+  background-repeat: repeat;
+  background-size: cover;
 }
 
 #sticky-footer {
   flex-shrink: none;
+  background-color: #446ef636 !important;
 }
