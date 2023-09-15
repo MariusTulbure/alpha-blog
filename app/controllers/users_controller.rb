@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       flash[:notice] = "#{@user.username.capitalize} welcome to the Alpha blog."
       redirect_to articles_path
     else
-      render 'new'
+      render :new, status: :unprocessable_entity
     end
   end
 
