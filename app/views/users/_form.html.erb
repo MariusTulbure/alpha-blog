@@ -1,5 +1,5 @@
 <%= render 'shared/errors', obj: @user %>
-<%= form_with(model: @users, local: true) do |f| %>
+<%= form_with(model: @user, local: true) do |f| %>
   <div class="form-group row">
     <div class="col-3 mx-auto">
       <%= f.text_field :username, class: "form-control", placeholder: 'Username' %>
@@ -20,7 +20,7 @@
   <br/>
   <div class="form-group text-center">
     <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-      <%= f.submit class: "btn btn-info"%>
+      <%= f.submit "Sign up", class: "btn btn-info" %>
       <%= link_to "Back to list", articles_path, class: "btn btn-secondary" %>
     </div>
   </div>
