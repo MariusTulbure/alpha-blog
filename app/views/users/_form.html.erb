@@ -21,7 +21,7 @@
   <div class="form-group text-center">
     <div class="btn-group" role="group" aria-label="Basic mixed styles example">
       <%= f.submit(@user.new_record? ? "Sign up" : "Update account", class: "btn btn-info") %>
-      <%= link_to "Back to home", root_path, class: "btn btn-secondary" %>
+      <%= link_to "Back to list", users_path, class: "btn btn-secondary" %>
     </div>
   </div>
 <% end %>

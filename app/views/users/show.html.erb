@@ -1,6 +1,8 @@
 <h1 class="text-center mt-4"><%= @user.username %></h1>
 <%= gravatar_for @user%>
-
+<div class="container text-center mt-3">
+  <%= link_to "Back to list", users_path, class: "btn btn-secondary" %>
+</div>
 <h2 class="text-center mt-4">Articles</h2>
 
 <%= render 'articles/article' %>
