@@ -1,12 +1,16 @@
 <h1 class="text-center mt-4"><%= @user.username %></h1>
+
 <%= gravatar_for @user%>
+
 <div class="text-center mt-4">
   <%= link_to "Back to list", users_path, class: "btn btn-secondary" %>
   <% if logged_in? && @user == current_user %>
     <%= link_to "Edit profile", edit_user_path(@user), class: "btn btn-success" %>
   <% end %>
 </div>
+
 <h2 class="text-center mt-4">Articles</h2>
+
 <div class="apple_pagination mx-auto">
   <%= will_paginate @articles, :container => false %>
 </div>

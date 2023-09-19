@@ -1,13 +1,14 @@
 <h1 class="text-center mt-4">Category <%= @category.name %></h1>
 
-
 <div class="text-center mt-4">
   <%= link_to "Back to list", categories_path, class: "btn btn-secondary" %>
   <% if logged_in? && current_user.admin? %>
     <%= link_to "Edit category name", edit_category_path(@category), class: "btn btn-success" %>
   <% end %>
 </div>
+
 <h2 class="text-center mt-4">Articles</h2>
+
 <div class="apple_pagination mx-auto">
   <%= will_paginate @articles, :container => false %>
 </div>

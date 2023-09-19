@@ -1,28 +1,28 @@
 <%= render 'shared/errors', obj: @user %>
+
 <%= form_with(model: @user, local: true) do |f| %>
-  <div class="form-group row">
+  <div class="form-group row mb-4">
     <div class="col-3 mx-auto">
       <%= f.text_field :username, class: "form-control", placeholder: 'Username' %>
     </div>
   </div>
-  <br/>
-  <div class="form-group row">
+
+  <div class="form-group row mb-4">
     <div class="col-3 mx-auto">
       <%= f.email_field :email, class: "form-control", placeholder: 'Email' %>
     </div>
   </div>
-  <br/>
-    <div class="form-group row">
+
+  <div class="form-group row mb-4">
     <div class="col-3 mx-auto">
       <%= f.password_field :password, class: "form-control", placeholder: 'Password' %>
     </div>
   </div>
-  <br/>
-  <div class="form-group text-center">
+
+  <div class="form-group text-center mb-4">
     <div class="btn-group" role="group" aria-label="Basic mixed styles example">
       <%= f.submit(@user.new_record? ? "Sign up" : "Update account", class: "btn btn-info") %>
       <%= link_to "Back to list", users_path, class: "btn btn-secondary" %>
     </div>
   </div>
 <% end %>
-

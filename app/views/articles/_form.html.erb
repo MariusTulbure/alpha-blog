@@ -1,19 +1,19 @@
 <%= render 'shared/errors', obj: @article %>
+
 <%= form_with(model: @article, local: true) do |f| %>
   <div class="form-group row">
-    <div class="col-8 mx-auto">
+    <div class="col-8 mx-auto mb-4">
       <%= f.text_field :title, class: "form-control", placeholder: 'Title' %>
     </div>
   </div>
-  <br/>
+
   <div class="form-group row">
-    <div class="col-8 mx-auto">
+    <div class="col-8 mx-auto mb-4">
       <%= f.text_area :description, rows: 10, class: "form-control", placeholder: 'Description of article' %>
     </div>
   </div>
 
-  <br/>
-  <div class="form-group row">
+  <div class="form-group row mb-4">
     <div class="col-8 mx-auto">
       <%= f.collection_select(:category_ids, Category.all, :id, :name,
       { prompt: "Make a selection of categories from the list below (can be empty)" },
@@ -21,12 +21,10 @@
     </div>
   </div>
 
-  <br/>
-  <div class="form-group text-center">
+  <div class="form-group text-center mb-4">
     <div class="btn-group" role="group" aria-label="Basic mixed styles example">
       <%= f.submit class: "btn btn-info"%>
       <%= link_to "Back to list", articles_path, class: "btn btn-secondary" %>
     </div>
   </div>
 <% end %>
-
