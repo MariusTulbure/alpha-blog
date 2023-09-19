@@ -1,18 +1,4 @@
-<%= render 'shared/errors', obj: @category %>
 <h1 class="text-center mt-4 mb-4">Create a new category</h1>
-<%= form_with(model: @category, local: true) do |f| %>
-  <div class="form-group row">
-    <div class="col-3 mx-auto">
-      <%= f.text_field :name, class: "form-control", placeholder: 'Name' %>
-    </div>
-  </div>
-  <br/>
-  <div class="form-group text-center">
-    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-      <%= f.submit class: "btn btn-info" %>
-      <%= link_to "Back to list", users_path, class: "btn btn-secondary" %>
-    </div>
-  </div>
-<% end %>
+<%=  render 'form'%>
 
 

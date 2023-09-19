@@ -1,0 +1,15 @@
+<%= render 'shared/errors', obj: @category %>
+<%= form_with(model: @category, local: true) do |f| %>
+  <div class="form-group row">
+    <div class="col-3 mx-auto">
+      <%= f.text_field :name, class: "form-control", placeholder: 'Name' %>
+    </div>
+  </div>
+  <br/>
+  <div class="form-group text-center">
+    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+      <%= f.submit class: "btn btn-info" %>
+      <%= link_to "Back to list", categories_path, class: "btn btn-secondary" %>
+    </div>
+  </div>
+<% end %>
